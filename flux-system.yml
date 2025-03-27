@@ -1,0 +1,15 @@
+apiVersion: infra.contrib.fluxcd.io/v1alpha1
+kind: Terraform
+metadata:
+  name: flux-system
+  namespace: flux-system
+spec:
+  interval: 1m
+  approvePlan: auto
+  path: ./
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+    namespace: flux-system
+  writeOutputsToSecret:
+    name: flux-system-output

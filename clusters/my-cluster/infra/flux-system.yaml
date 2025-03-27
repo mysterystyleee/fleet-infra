@@ -6,7 +6,7 @@ metadata:
 spec:
   interval: 1m
   approvePlan: auto
-  path: ./
+  path: ./modules/hello/
   sourceRef:
     kind: GitRepository
     name: flux-system
